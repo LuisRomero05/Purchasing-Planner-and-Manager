@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 //import 'package:application_purchasing_planner_and_manager/styles/colors.dart';
 //import 'package:application_purchasing_planner_and_manager/styles/textstyles.dart';
 
-class MyWidget extends StatelessWidget {
+class Inicio extends StatelessWidget {
   
-  const MyWidget({super.key});
+  const Inicio({super.key});
 
   @override
   Widget build(BuildContext context) {
