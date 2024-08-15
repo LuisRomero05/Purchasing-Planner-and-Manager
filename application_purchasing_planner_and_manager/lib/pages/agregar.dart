@@ -1,13 +1,12 @@
-import 'dart:ffi';
 //import 'dart:ffi';
-
 import 'package:application_purchasing_planner_and_manager/pages/inicio.dart';
 import 'package:application_purchasing_planner_and_manager/widgets/iconbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:application_purchasing_planner_and_manager/backend/models.dart';
 import 'package:get/get.dart';
-import 'package:intl/intl.dart';
-import 'package:application_purchasing_planner_and_manager/backend/controladores/controladores.dart';
+import 'package:application_purchasing_planner_and_manager/styles/textStyles.dart';
+//import 'package:intl/intl.dart';
+//import 'package:application_purchasing_planner_and_manager/backend/controladores/controladores.dart';
 
 class AgregarNota extends StatefulWidget {
   final bool estado;
@@ -76,13 +75,13 @@ class _AgregarNotaState extends State<AgregarNota> {
             cursorColor: Colors.white,
             maxLines: 3,
             minLines: 1,
-            decoration: const InputDecoration(
+            decoration: InputDecoration(
               hintText: "Title",
-              hintStyle: TextStyle(color: Colors.white),
-              focusedBorder: UnderlineInputBorder(
+              hintStyle: titleTextStyle.copyWith(color: Colors.grey),
+              focusedBorder: const UnderlineInputBorder(
                 borderSide: BorderSide(color: Colors.white),
               ),
-              enabledBorder: UnderlineInputBorder(
+              enabledBorder: const UnderlineInputBorder(
                 borderSide: BorderSide(color: Colors.white),
               ),
             ),
