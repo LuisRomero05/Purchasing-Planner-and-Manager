@@ -1,5 +1,5 @@
 import 'dart:ffi';
-import 'dart:ffi';
+//import 'dart:ffi';
 
 import 'package:application_purchasing_planner_and_manager/pages/inicio.dart';
 import 'package:application_purchasing_planner_and_manager/widgets/iconbutton.dart';
@@ -12,7 +12,7 @@ import 'package:application_purchasing_planner_and_manager/backend/controladores
 class AgregarNota extends StatefulWidget {
   final bool estado;
   final Note? note;
-  const AgregarNota({super.key, this.estado=false, this.note});
+  const AgregarNota({super.key, this.estado = false, this.note});
   @override
   State<AgregarNota> createState() => _AgregarNotaState();
 }
@@ -20,36 +20,44 @@ class AgregarNota extends StatefulWidget {
 class _AgregarNotaState extends State<AgregarNota> {
   final TextEditingController _titleTextController = TextEditingController();
   final TextEditingController _noteTextController = TextEditingController();
-  final NoteController _noteController = Get.find<NoteController>();
-  final TextEditingController _tagEditingController = TextEditingController();
-  final DateTime _currentDate = DateTime.now();
-  final double _precio=double.infinity;
+  // final NoteController _noteController = Get.find<NoteController>();
+  // final TextEditingController _tagEditingController = TextEditingController();
+  // final DateTime _currentDate = DateTime.now();
+  // final double _precio=double.infinity;
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.black,
-      body: SafeArea(child: Column(
+      body: SafeArea(
+          child: Column(
         children: [
-
+          _appBar(),
+          _body(),
         ],
       )),
     );
   }
-  _appBar(){
+
+  _appBar() {
     return Container(
       margin: const EdgeInsets.only(top: 16),
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          MyIconButton(onTap: (){
-            Get.back();        
-
-          },
-          icon: Icons.keyboard_arrow_left,
+          MyIconButton(
+            onTap: () {
+              Get.back();
+            },
+            icon: Icons.keyboard_arrow_left,
           ),
-          MyIconButton(onTap: (){})
+          MyIconButton(
+            onTap: () {
+              _validateInput();
+            },
+            txt: widget.estado ? "Update" : "Save",
+          )
         ],
       ),
     );
@@ -70,12 +78,12 @@ class _AgregarNotaState extends State<AgregarNota> {
             minLines: 1,
             decoration: const InputDecoration(
               hintText: "Title",
-              //hintStyle: titleTextStyle.copyWith(color: Colors.grey),
+              hintStyle: TextStyle(color: Colors.white),
               focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey),
+                borderSide: BorderSide(color: Colors.white),
               ),
               enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey),
+                borderSide: BorderSide(color: Colors.white),
               ),
             ),
           ),
@@ -92,10 +100,10 @@ class _AgregarNotaState extends State<AgregarNota> {
               hintText: "Type something...",
               //hintStyle: bodyTextStyle,
               focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.black12),
+                borderSide: BorderSide(color: Colors.white10),
               ),
               enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.black12),
+                borderSide: BorderSide(color: Colors.white10),
               ),
             ),
           ),
@@ -118,7 +126,7 @@ class _AgregarNotaState extends State<AgregarNota> {
     } else {
       Get.snackbar(
         widget.estado ? "Not Updated" : "Required*",
-        widget.estado 
+        widget.estado
             ? "Fields are not updated yet."
             : "All fields are required.",
         snackPosition: SnackPosition.BOTTOM,
