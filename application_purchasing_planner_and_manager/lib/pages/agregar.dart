@@ -70,8 +70,8 @@ class _AgregarNotaState extends State<AgregarNota> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextFormField(
-            //controller: _titleTextController,
-            //style: titleTextStyle,
+            controller: _titleTextController,
+            style: titleTextStyle,
             cursorColor: Colors.white,
             maxLines: 3,
             minLines: 1,
@@ -90,8 +90,8 @@ class _AgregarNotaState extends State<AgregarNota> {
             height: 12,
           ),
           TextFormField(
-            //controller: _noteTextController,
-            //style: bodyTextStyle,
+            controller: _noteTextController,
+            style: bodyTextStyle,
             cursorColor: Colors.white,
             minLines: 3,
             maxLines: 12,
