@@ -1,10 +1,11 @@
-// ignore: file_names
+// ignore_for_file: constant_identifier_names, file_names
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:application_purchasing_planner_and_manager/backend/models.dart';
 import 'package:application_purchasing_planner_and_manager/styles/colors.dart';
 import 'package:application_purchasing_planner_and_manager/styles/textStyles.dart';
-import 'package:application_purchasing_planner_and_manager/pages/detallesNotas.dart';
+import 'package:application_purchasing_planner_and_manager/pages/detalles_Notas.dart';
 
 enum TileType {
   Square,

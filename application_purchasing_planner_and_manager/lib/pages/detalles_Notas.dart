@@ -1,3 +1,4 @@
+// ignore_for_file: file_names
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:application_purchasing_planner_and_manager/backend/controladores/controladores.dart';

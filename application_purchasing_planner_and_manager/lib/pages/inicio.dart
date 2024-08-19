@@ -56,7 +56,7 @@ class Inicio extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            //_body(),
+            _body(),
           ],
         ),
       ),

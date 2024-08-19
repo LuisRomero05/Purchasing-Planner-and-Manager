@@ -95,13 +95,13 @@ class _AgregarNotaState extends State<AgregarNota> {
             cursorColor: Colors.white,
             minLines: 3,
             maxLines: 12,
-            decoration: const InputDecoration(
-              hintText: "Type something...",
-              //hintStyle: bodyTextStyle,
-              focusedBorder: UnderlineInputBorder(
+            decoration: InputDecoration(
+              hintText: "Escribe Algo...",
+              hintStyle: bodyTextStyle,
+              focusedBorder: const UnderlineInputBorder(
                 borderSide: BorderSide(color: Colors.white10),
               ),
-              enabledBorder: UnderlineInputBorder(
+              enabledBorder: const UnderlineInputBorder(
                 borderSide: BorderSide(color: Colors.white10),
               ),
             ),

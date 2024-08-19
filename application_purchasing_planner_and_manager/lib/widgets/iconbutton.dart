@@ -6,8 +6,8 @@ class MyIconButton extends StatelessWidget {
   final VoidCallback onTap;
   final String txt;
 
-  const MyIconButton({Key? key, this.icon, required this.onTap, this.txt = ""})
-      : super(key: key);
+  const MyIconButton(
+      {super.key, this.icon, required this.onTap, this.txt = ""});
 
   @override
   Widget build(BuildContext context) {
