@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "222107780521",
+    "project_id": "personalshopper-c98f1",
+    "storage_bucket": "personalshopper-c98f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222107780521:android:7c9a40dffa2359358270b8",
+        "android_client_info": {
+          "package_name": "com.example.application_purchasing_planner_and_manager"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwL0Qjuvrj1bXPRyJsdfDW-j6Z5cBbZBQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
