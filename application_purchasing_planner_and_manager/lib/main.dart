@@ -1,3 +1,4 @@
+import 'package:application_purchasing_planner_and_manager/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:application_purchasing_planner_and_manager/pages/inicio.dart';
 import 'package:get/get.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'App de Notas',
-      home: Inicio(),
+      home: Home_Page(),
     );
   }
 }
